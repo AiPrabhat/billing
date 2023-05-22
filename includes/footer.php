@@ -27,24 +27,49 @@
     <script src="./plugins/datatables-buttons/js/buttons.html5.min.js"></script>
     <script src="./plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="./plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script src="./plugins/select2/js/select2.full.min.js"></script>
+    <script src="./plugins/sweetalert2/sweetalert2.min.js"></script>
 
     <script>
       $(function() {
         $("#example1").DataTable({
-          "responsive": true,
-          "lengthChange": false,
-          "autoWidth": false,
-          "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        $('#example2').DataTable({
           "paging": true,
-          "lengthChange": false,
-          "searching": false,
+          "lengthChange": true,
+          "searching": true,
           "ordering": true,
           "info": true,
           "autoWidth": false,
           "responsive": true,
+          "buttons": ["csv", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      });
+
+      // Dropdown Search Select2
+
+      $(function() {
+        //Initialize Select2 Elements
+        $('.select2').select2()
+
+        //Initialize Select2 Elements
+        $('.select2bs4').select2({
+          theme: 'bootstrap4'
+        })
+      });
+
+      $(function() {
+        var Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000
         });
+
+        // $('.swalDefaultsuccess').click(function() {
+        //   Toast.fire({
+        //     icon: '<?php echo $imsg ?>',
+        //     title: '<?php echo $msg ?>'
+        //   })
+        // })
       });
     </script>
 

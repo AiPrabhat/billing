@@ -28,11 +28,15 @@ $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], "/") + 
   <link rel="stylesheet" href="./plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="./plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="./plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Select 2 -->
+  <link rel="stylesheet" href="./plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="./plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <!-- sweetalert2 -->
+  <link rel="stylesheet" href="./plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="./dist/css/adminlte.min.css">
 </head>
 
 <body class="sidebar-mini layout-fixed" style="height: auto;">
-
 
   <div class="wrapper">

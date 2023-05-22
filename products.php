@@ -64,13 +64,14 @@ $res = mysqli_query($con, $sql);
                                         <table id="example1" class="table table-bordered table-striped dataTable" aria-describedby="example1_info">
                                             <thead>
                                                 <tr>
-                                                    <th class="sorting sorting_asc">#</th>
-                                                    <th class="sorting">HSN Code</th>
-                                                    <th class="sorting">Name</th>
+                                                    <th class="sorting">#</th>
+                                                    <th class="sorting">Product Name</th>
+                                                    <!-- <th class="sorting">Brand</th> -->
+                                                    <!-- <th class="sorting">HSN Code</th> -->
                                                     <th class="sorting">Mrp</th>
                                                     <th class="sorting">Rate</th>
-                                                    <th class="sorting">Qty</th>
-                                                    <th class="sorting">Actions</th>
+                                                    <th class="sorting">Status</th>
+                                                    <th class="sorting">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -80,25 +81,27 @@ $res = mysqli_query($con, $sql);
                                                 ?>
                                                     <tr>
                                                         <th><?php echo $i ?></th>
-                                                        <td><?php echo $row['hsn_code'] ?></td>
-                                                        <td><?php echo $row['name'] ?></td>
+                                                        <td><a href="view_products.php?id=<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></td>
+                                                        <!-- <td><?php echo $row['brand'] ?></td> -->
+                                                        <!-- <td><?php echo $row['hsn_code'] ?></td> -->
                                                         <td><?php echo $row['mrp'] ?></td>
                                                         <td><?php echo $row['rate'] ?></td>
-                                                        <td><?php echo $row['qty'] ?></td>
+                                                        <td>
+                                                            <?php
+                                                            if ($row['status'] == 1) {
+                                                                echo '<span class="badge badge-success">Active</span>';
+                                                            } else {
+                                                                echo '<span class="badge badge-danger">Inactive</span>';
+                                                            }
+                                                            ?>
+                                                        </td>
                                                         <td class="text-center">
-                                                            <a href="view_products.php?id=<?php echo $row['id'] ?>" class="btn btn-info" title="View">
-                                                                <i class="fas fa-eye text-white"></i>
-                                                            </a>
                                                             <a href="add_products.php?id=<?php echo $row['id'] ?>" class="btn btn-warning" title="Edit">
-                                                                <i class="fas fa-edit text-white"></i>
+                                                                <i class="fas fa-edit"></i>
                                                             </a>
-                                                            <!-- <a href="?type=delete&id=" class="btn btn-sm btn-danger" data-toggle="tooltip" data-original-title="Delete">
-													<i class="fas fa-times text-white">&nbsp;</i>
-												</a> -->
                                                         </td>
                                                     </tr>
-                                                    <?php $i++ ?>
-                                                <?php } ?>
+                                                    <?php $i++; } ?>
                                             </tbody>
                                         </table>
                                     </div>

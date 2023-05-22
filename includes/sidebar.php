@@ -38,13 +38,15 @@
     <!-- Sidebar Menu -->
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
         <li class="nav-item">
           <a href="./index.php" class="nav-link <?= $page == 'index.php' ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-home"></i>
             <p>Dashboard</p>
           </a>
         </li>
-        <li class="nav-item <?= $page == 'sales.php' | $page == 'add_sales.php' | $page == 'view_sales.php' | $page == 'sales_return.php' ? 'menu-open' : ''; ?>">
+
+        <!-- <li class="nav-item <?= $page == 'sales.php' | $page == 'add_sales.php' | $page == 'view_sales.php' | $page == 'sales_return.php' ? 'menu-open' : ''; ?>">
           <a href="#" class="nav-link <?= $page == 'sales.php' | $page == 'add_sales.php' | $page == 'view_sales.php' | $page == 'sales_return.php' ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-list"></i>
             <p>Sales<i class="right fas fa-angle-left"></i></p>
@@ -89,113 +91,57 @@
               </a>
             </li>
           </ul>
-        </li>
-        <li class="nav-item <?= $page == 'retailers.php' | $page == 'add_retailers.php' | $page == 'view_retailers.php' ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?= $page == 'retailers.php' | $page == 'add_retailers.php' | $page == 'view_retailers.php' ? 'active' : ''; ?>">
+        </li> -->
+
+        <li class="nav-item">
+          <a href="retailers.php" class="nav-link <?= $page == 'retailers.php' | $page == 'add_retailers.php' | $page == 'view_retailers.php' ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-address-card"></i>
-            <p>Retailers<i class="right fas fa-angle-left"></i></p>
+            <p>Retailers</p>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="./add_retailers.php" class="nav-link <?= $page == 'add_retailers.php' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Add Retailers</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="./retailers.php" class="nav-link <?= $page == 'retailers.php' | $page == 'view_retailers.php' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Manage Retailers</p>
-              </a>
-            </li>
-          </ul>
         </li>
-        <li class="nav-item <?= $page == 'products.php' | $page == 'add_products.php' | $page == 'view_products.php' ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?= $page == 'products.php' | $page == 'add_products.php' | $page == 'view_products.php' ? 'active' : ''; ?>">
+
+        <li class="nav-item">
+          <a href="products.php" class="nav-link <?= $page == 'products.php' | $page == 'add_products.php' | $page == 'view_products.php' ? 'active' : ''; ?>">
             <i class="nav-icon fab fa-product-hunt"></i>
-            <p>Products<i class="right fas fa-angle-left"></i></p>
+            <p>Products</p>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="./add_products.php" class="nav-link <?= $page == 'add_products.php' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Add Products</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="./products.php" class="nav-link <?= $page == 'products.php' | $page == 'view_products.php' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Manage Products</p>
-              </a>
-            </li>
-          </ul>
         </li>
-        <li class="nav-item <?= $page == 'tax.php' | $page == 'add_tax.php' | $page == 'view_tax.php' ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?= $page == 'tax.php' | $page == 'add_tax.php' | $page == 'view_tax.php' ? 'active' : ''; ?>">
+
+        <li class="nav-item">
+          <a href="brands.php" class="nav-link <?= $page == 'brands.php' | $page == 'add_brands.php' | $page == 'view_brands.php' ? 'active' : ''; ?>">
+            <i class="nav-icon fas fa-bolt"></i>
+            <p>Brands</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="tax.php" class="nav-link <?= $page == 'tax.php' | $page == 'add_tax.php' | $page == 'view_tax.php' ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-chart-pie"></i>
-            <p>Tax<i class="right fas fa-angle-left"></i></p>
+            <p>Tax</p>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="./add_tax.php" class="nav-link <?= $page == 'add_tax.php' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Add Tax</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="./tax.php" class="nav-link <?= $page == 'tax.php' | $page == 'view_tax.php' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Manage Tax</p>
-              </a>
-            </li>
-          </ul>
         </li>
-        <li class="nav-item <?= $page == 'routes.php' | $page == 'add_routes.php' | $page == 'view_routes.php' ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?= $page == 'routes.php' | $page == 'add_routes.php' | $page == 'view_routes.php' ? 'active' : ''; ?>">
+
+        <li class="nav-item">
+          <a href="routes.php" class="nav-link <?= $page == 'routes.php' | $page == 'add_routes.php' | $page == 'view_routes.php' ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-route"></i>
-            <p>Routes<i class="right fas fa-angle-left"></i></p>
+            <p>Routes</p>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="./add_routes.php" class="nav-link <?= $page == 'add_routes.php' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Add Routes</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="./routes.php" class="nav-link <?= $page == 'routes.php' | $page == 'view_routes.php' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Manage Routes</p>
-              </a>
-            </li>
-          </ul>
         </li>
-        <li class="nav-item <?= $page == 'users.php' | $page == 'add_users.php' | $page == 'view_users.php' ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?= $page == 'users.php' | $page == 'add_users.php' | $page == 'view_users.php' ? 'active' : ''; ?>">
+
+        <li class="nav-item">
+          <a href="users.php" class="nav-link <?= $page == 'users.php' | $page == 'add_users.php' | $page == 'view_users.php' ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-users-cog"></i>
-            <p>Users <i class="right fas fa-angle-left"></i></p>
+            <p>Users</p>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="./add_users.php" class="nav-link <?= $page == 'add_users.php' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Add Users</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="./users.php" class="nav-link <?= $page == 'users.php' | $page == 'view_users.php' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Manage Users</p>
-              </a>
-            </li>
-          </ul>
         </li>
+
         <li class="nav-item">
           <a href="./account.php" class="nav-link <?= $page == 'account.php' ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-user"></i>
             <p>My Account</p>
           </a>
         </li>
+
       </ul>
     </nav>
     <!-- /.sidebar-menu -->

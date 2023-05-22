@@ -119,8 +119,8 @@ if (isset($_POST['submit'])) {
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="text-danger ml-3 mb-3"><b><?php echo $msg ?></b></div>
-                                    <div class="form-group col-md-12 mt-2">
+                                    <div class="text-danger ml-3 mb-2"><b><?php echo $msg ?></b></div>
+                                    <div class="form-group col-md-12">
                                         <button type="submit" name="submit" class="btn bg-primary btn-block">
                                             <i class="fas fa-save">&nbsp;</i> Save
                                         </button>

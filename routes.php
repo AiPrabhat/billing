@@ -64,7 +64,7 @@ $res = mysqli_query($con, $sql);
                                         <table id="example1" class="table table-bordered table-striped dataTable" aria-describedby="example1_info">
                                             <thead>
                                                 <tr>
-                                                    <th class="sorting sorting_asc">#</th>
+                                                    <th class="sorting">#</th>
                                                     <th class="sorting">Name</th>
                                                     <th class="sorting">Status</th>
                                                     <th class="sorting">Actions</th>
@@ -88,15 +88,9 @@ $res = mysqli_query($con, $sql);
                                                             ?>
                                                         </td>
                                                         <td class="text-center">
-                                                            <a href="view_routes.php?id=<?php echo $row['id'] ?>" class="btn btn-info" title="View">
-                                                                <i class="fas fa-eye text-white"></i>
-                                                            </a>
                                                             <a href="add_routes.php?id=<?php echo $row['id'] ?>" class="btn btn-warning" title="Edit">
-                                                                <i class="fas fa-edit text-white"></i>
+                                                                <i class="fas fa-edit"></i>
                                                             </a>
-                                                            <!-- <a href="?type=delete&id=" class="btn btn-sm btn-danger" title="Delete">
-													            <i class="fas fa-times text-white">&nbsp;</i>
-												            </a> -->
                                                         </td>
                                                     </tr>
                                                     <?php $i++ ?>

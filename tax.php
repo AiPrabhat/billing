@@ -7,20 +7,19 @@ include './includes/sidebar.php';
 include './includes/connection.php';
 include './includes/function.php';
 
-if (isset($_GET['type']) && $_GET['type'] != '') {
-    $type = get_safe_value($con, $_GET['type']);
-
-    if ($type == 'delete') {
-        $id = get_safe_value($con, $_GET['id']);
-        $delete_sql = "delete from tax where id='$id';";
-        mysqli_query($con, $delete_sql);
-    }
-}
-
 $sql = "select * from tax order by id asc;";
 $res = mysqli_query($con, $sql);
 
 ?>
+
+<script>
+    Toast . fire(
+    'Good job!',
+    'You clicked the button!',
+    'success'
+)
+</script>
+
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -64,7 +63,7 @@ $res = mysqli_query($con, $sql);
                                         <table id="example1" class="table table-bordered table-striped dataTable" aria-describedby="example1_info">
                                             <thead>
                                                 <tr>
-                                                    <th class="sorting sorting_asc">#</th>
+                                                    <th class="sorting">#</th>
                                                     <th class="sorting">CGST</th>
                                                     <th class="sorting">SGST</th>
                                                     <th class="sorting">Status</th>
@@ -90,15 +89,9 @@ $res = mysqli_query($con, $sql);
                                                             ?>
                                                         </td>
                                                         <td class="text-center">
-                                                            <a href="view_tax.php?id=<?php echo $row['id'] ?>" class="btn btn-info" title="View">
-                                                                <i class="fas fa-eye text-white"></i>
-                                                            </a>
                                                             <a href="add_tax.php?id=<?php echo $row['id'] ?>" class="btn btn-warning" title="Edit">
-                                                                <i class="fas fa-edit text-white"></i>
+                                                                <i class="fas fa-edit"></i>
                                                             </a>
-                                                            <!-- <a href="?type=delete&id=" class="btn btn-sm btn-danger" title="Delete">
-													            <i class="fas fa-times text-white">&nbsp;</i>
-												            </a> -->
                                                         </td>
                                                     </tr>
                                                     <?php $i++ ?>

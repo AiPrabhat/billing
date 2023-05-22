@@ -28,6 +28,7 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
 }
 
 $msg = '';
+$imsg = '';
 if (isset($_POST['submit'])) {
     $cgst = get_safe_value($con, $_POST['cgst']);
     $sgst = get_safe_value($con, $_POST['sgst']);
@@ -55,6 +56,8 @@ if (isset($_POST['submit'])) {
         } else {
             $query = "INSERT INTO tax(id, cgst, sgst, `status`, created_at) VALUES (DEFAULT,'$cgst','$sgst','$status',DEFAULT)";
             mysqli_query($con, $query);
+            $msg = "Tax Slab Added Successfully.";
+            $imsg = "success";
         }
         echo "<script type='text/javascript'>";
         echo "window.location = 'tax.php';";
@@ -67,9 +70,6 @@ if (isset($_POST['submit'])) {
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <?php 
-    // include('message.php'); 
-    ?>
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -126,9 +126,9 @@ if (isset($_POST['submit'])) {
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="text-danger ml-3 mb-3"><b><?php echo $msg ?></b></div>
-                                    <div class="form-group col-md-12 mt-2">
-                                        <button type="submit" name="submit" class="btn bg-primary btn-block">
+                                    <div class="text-danger ml-3 mb-2"><b><?php echo $msg ?></b></div>
+                                    <div class="form-group col-md-12">
+                                        <button type="submit" name="submit" class="btn bg-primary btn-block swalDefaultSuccess">
                                             <i class="fas fa-save">&nbsp;</i> Save
                                         </button>
                                     </div>

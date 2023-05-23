@@ -166,7 +166,7 @@ if (isset($_POST['submit'])) {
                                         <div class="form-group">
                                             <label>Select Route<span class="text-danger">*</span></label>
                                             <select name="route" class="form-control select2" required>
-                                                <option value="">Select Route</option>
+                                                <option value="">--- Select Route ---</option>
                                                 <?php
                                                 $sql = "select * from routes where status=1 order by name asc;";
                                                 $froute = mysqli_query($con, $sql);
@@ -203,15 +203,21 @@ if (isset($_POST['submit'])) {
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>State<span class="text-danger">*</span></label>
-                                            <select name="state" class="form-control" required>
-                                                <option value="Maharashtra" <?php if ($state == "Maharashtra") echo 'selected="selected"'; ?>>Maharashtra</option>
+                                            <select name="state" class="form-control select2" required>
+                                                <option value="">--- Select State ---</option>
+                                                <?php
+                                                $sql = "select * from address where status=1 order by state asc;";
+                                                $address = mysqli_query($con, $sql);
+                                                while ($arow = mysqli_fetch_assoc($address)) { ?>
+                                                    <option value="<?php echo $arow['state'] ?>" <?php if ($state == $arow['state']) echo 'selected="selected"'; ?>><?php echo $arow['state'] ?></option>
+                                                <?php } ?>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Country<span class="text-danger">*</span></label>
-                                            <select name="country" class="form-control" required>
+                                            <select name="country" class="form-control select2" required>
                                                 <option value="India" <?php if ($country == "India") echo 'selected="selected"'; ?>>India</option>
                                             </select>
                                         </div>
@@ -219,8 +225,8 @@ if (isset($_POST['submit'])) {
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Retailer Type<span class="text-danger">*</span></label>
-                                            <select name="retailer_type" class="form-control" required>
-                                                <option value="">----- Retailer Type -----</option>
+                                            <select name="retailer_type" class="form-control select2" required>
+                                                <option value="">--- Retailer Type ---</option>
                                                 <option value="General Store" <?php if ($retailer_type == "General Store") echo 'selected="selected"'; ?>>General Store</option>
                                                 <option value="Chemist" <?php if ($retailer_type == "Chemist") echo 'selected="selected"'; ?>>Chemist</option>
                                                 <option value="Dairy" <?php if ($retailer_type == "Dairy") echo 'selected="selected"'; ?>>Dairy</option>
@@ -231,7 +237,7 @@ if (isset($_POST['submit'])) {
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Status<span class="text-danger">*</span></label>
-                                            <select name="status" class="form-control" required>
+                                            <select name="status" class="form-control select2" required>
                                                 <option value="1" <?php if ($status == "1") echo 'selected="selected"'; ?>>Active</option>
                                                 <option value="0" <?php if ($status == "0") echo 'selected="selected"'; ?>>Inactive</option>
                                             </select>

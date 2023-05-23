@@ -82,7 +82,7 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Brand<span class="text-danger">*</span></label>
-                                            <select name="brand" class="form-control" disabled>
+                                            <select name="brand" class="form-control select2" disabled>
                                                 <option value="">Select Brand</option>
                                                 <?php
                                                 $sql = "select * from brands where status=1 order by brand asc;";
@@ -114,7 +114,7 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Status<span class="text-danger">*</span></label>
-                                            <select name="status" class="form-control" disabled>
+                                            <select name="status" class="form-control select2" disabled>
                                                 <option value="1" <?php if ($status == "1") echo 'selected="selected"'; ?>>Active</option>
                                                 <option value="0" <?php if ($status == "0") echo 'selected="selected"'; ?>>Inactive</option>
                                             </select>

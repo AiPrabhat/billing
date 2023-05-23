@@ -7,16 +7,6 @@ include './includes/sidebar.php';
 include './includes/connection.php';
 include './includes/function.php';
 
-if (isset($_GET['type']) && $_GET['type'] != '') {
-    $type = get_safe_value($con, $_GET['type']);
-
-    if ($type == 'delete') {
-        $id = get_safe_value($con, $_GET['id']);
-        $delete_sql = "delete from brands where id='$id';";
-        mysqli_query($con, $delete_sql);
-    }
-}
-
 $sql = "select * from brands order by id asc;";
 $res = mysqli_query($con, $sql);
 

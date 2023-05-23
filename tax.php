@@ -12,15 +12,6 @@ $res = mysqli_query($con, $sql);
 
 ?>
 
-<script>
-    Toast . fire(
-    'Good job!',
-    'You clicked the button!',
-    'success'
-)
-</script>
-
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->

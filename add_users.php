@@ -130,7 +130,7 @@ if (isset($_POST['submit'])) {
                                         </div>
                                         <div class="form-group">
                                             <label>Status<span class="text-danger">*</span></label>
-                                            <select name="status" class="form-control" required>
+                                            <select name="status" class="form-control select2" required>
                                                 <option value="1" <?php if ($status == "1") echo 'selected="selected"'; ?>>Active</option>
                                                 <option value="0" <?php if ($status == "0") echo 'selected="selected"'; ?>>Inactive</option>
                                             </select>

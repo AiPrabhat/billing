@@ -148,7 +148,7 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>State<span class="text-danger">*</span></label>
-                                            <select name="state" class="form-control" disabled>
+                                            <select name="state" class="form-control select2" disabled>
                                                 <option value="Maharashtra" <?php if ($state == "Maharashtra") echo 'selected="selected"'; ?>>Maharashtra</option>
                                             </select>
                                         </div>
@@ -156,7 +156,7 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Country<span class="text-danger">*</span></label>
-                                            <select name="country" class="form-control" disabled>
+                                            <select name="country" class="form-control select2" disabled>
                                                 <option value="India" <?php if ($country == "India") echo 'selected="selected"'; ?>>India</option>
                                             </select>
                                         </div>
@@ -164,7 +164,7 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Retailer Type<span class="text-danger">*</span></label>
-                                            <select name="retailer_type" class="form-control" disabled>
+                                            <select name="retailer_type" class="form-control select2" disabled>
                                                 <option value="">----- Retailer Type -----</option>
                                                 <option value="General Store" <?php if ($retailer_type == "General Store") echo 'selected="selected"'; ?>>General Store</option>
                                                 <option value="Chemist" <?php if ($retailer_type == "Chemist") echo 'selected="selected"'; ?>>Chemist</option>
@@ -176,7 +176,7 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Status<span class="text-danger">*</span></label>
-                                            <select name="status" class="form-control" disabled>
+                                            <select name="status" class="form-control select2" disabled>
                                                 <option value="1" <?php if ($status == "1") echo 'selected="selected"'; ?>>Active</option>
                                                 <option value="0" <?php if ($status == "0") echo 'selected="selected"'; ?>>Inactive</option>
                                             </select>

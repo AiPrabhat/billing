@@ -46,32 +46,6 @@
           </a>
         </li>
 
-        <!-- <li class="nav-item <?= $page == 'sales.php' | $page == 'add_sales.php' | $page == 'view_sales.php' | $page == 'sales_return.php' ? 'menu-open' : ''; ?>">
-          <a href="#" class="nav-link <?= $page == 'sales.php' | $page == 'add_sales.php' | $page == 'view_sales.php' | $page == 'sales_return.php' ? 'active' : ''; ?>">
-            <i class="nav-icon fas fa-list"></i>
-            <p>Sales<i class="right fas fa-angle-left"></i></p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="./add_sales.php" class="nav-link <?= $page == 'add_sales.php' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Add Sales</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="./sales.php" class="nav-link <?= $page == 'sales.php' | $page == 'view_sales' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Manage Sales</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="./sales_return.php" class="nav-link <?= $page == 'sales_return.php' ? 'active' : ''; ?>">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Sales Return</p>
-              </a>
-            </li>
-          </ul>
-        </li>
         <li class="nav-item <?= $page == 'purchase.php' | $page == 'add_purchase.php' | $page == 'view_purchase.php' ? 'menu-open' : ''; ?>">
           <a href="#" class="nav-link <?= $page == 'purchase.php' | $page == 'add_purchase.php' | $page == 'view_purchase.php' ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-file-invoice"></i>
@@ -79,24 +53,37 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
+              <a href="./purchase.php" class="nav-link <?= $page == 'purchase.php' | $page == 'view_purchase.php' ? 'active' : ''; ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Manage Purchase</p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a href="./add_purchase.php" class="nav-link <?= $page == 'add_purchase.php' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Add Purchase</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="./purchase.php" class="nav-link <?= $page == 'purchase.php' | $page == 'view_purchase.php' ? 'active' : ''; ?>">
+              <a href="./purchase.php" class="nav-link <?= $page == 'add_suppliers.php' ? 'active' : ''; ?>">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Manage Purchase</p>
+                <p>Add Suppliers</p>
               </a>
             </li>
           </ul>
-        </li> -->
+        </li>
 
         <li class="nav-item">
           <a href="retailers.php" class="nav-link <?= $page == 'retailers.php' | $page == 'add_retailers.php' | $page == 'view_retailers.php' ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-address-card"></i>
             <p>Retailers</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="retailers.php" class="nav-link <?= $page == 'salesman.php' | $page == 'add_salesman.php' | $page == 'view_retailers.php' ? 'active' : ''; ?>">
+            <i class="nav-icon fas fa-users"></i>
+            <p>Salesman</p>
           </a>
         </li>
 

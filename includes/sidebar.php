@@ -81,7 +81,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="retailers.php" class="nav-link <?= $page == 'salesman.php' | $page == 'add_salesman.php' | $page == 'view_retailers.php' ? 'active' : ''; ?>">
+          <a href="salesman.php" class="nav-link <?= $page == 'salesman.php' | $page == 'add_salesman.php' | $page == 'view_retailers.php' ? 'active' : ''; ?>">
             <i class="nav-icon fas fa-users"></i>
             <p>Salesman</p>
           </a>
